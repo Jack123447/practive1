@@ -1,0 +1,143 @@
+ *{
+
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+ .nav-container {
+
+ 	 background-color: steelblue;
+ 	 padding: 30px;
+
+
+ }
+
+ .navbar{
+
+ 	 display: flex;
+ 	 align-items: center;
+
+ }
+
+ ul.nav-menu {
+
+ 	 display: flex;
+ 	 justify-content: space-around;
+   flex: 1;
+ 	 list-style-type: none;
+ }
+
+  ul.nav-menu  li a {
+
+  	 text-decoration: none;
+  	 color: #fdfdfd;
+  	 transition: 0.3s ease-in;
+  	 font-family: Microsoft YaHei;
+  }
+
+   h2.navbar-Logo {
+   
+    flex: 1.1;
+   font-family: 'Yellowtail', cursive;
+   font-size: 30px;
+
+ }
+
+  ul.nav-menu li a:hover{
+
+  	 color: orange;
+  }
+
+ 
+ 
+ 
+  
+  .Hamburger-Line{  /*設定Hamburger三條線*/
+ 	width: 25px;
+ 	height: 3px;
+  margin: 5px 0px; /*設定Hamburger三條線上下之間的距離*/
+ 	transition: 0.1s ease-in;
+ 	background-color: orange;
+ }
+
+  
+
+ @media(max-width: 800px) {
+
+ 	 .nav-container {
+
+ 	 	  position: relative;
+ 	 }
+
+ 	 .nav-menu {
+
+ 	 	flex-direction: column;
+    background-color: slategray;
+ 	  width: 100%;
+ 	 	position: absolute;
+    top: 100px;
+ 	 	left: -100%;/*先暫時把navbar移到左邊*/
+ 	  
+ 	 	transition: 0.3s ease-in;
+ 	 }
+
+ 	 h2.navbar-Logo {
+
+ 	 	 margin-left: 30px;
+ 	 }
+
+ 	 .nav-menu.mobile-navbar {
+
+ 
+ 	 	left: 0;
+    transition: 0.3s ease-in;
+ 	 	 
+ 	 }
+
+ 	 .nav-menu li a{
+
+ 	 	position: relative;
+ 	  left: 300px;
+ 	 	line-height: 100px;
+ 	 	font-family: Microsoft YaHei;
+ 	 }
+
+ 
+    .Hamburger-Line{
+
+     display: block;
+     cursor: pointer;
+   }
+
+ 	  #Hamburger-Icon {
+      position: fixed;
+      right: 10%;
+
+   }
+ 	 .nav-menu li:hover {
+
+ 	 	 background-color: orange;
+ 	 }
+ 
+
+ 	   
+
+      #Hamburger-Icon.delete-icon .Hamburger-Line:nth-child(2) { /*設定當點擊Hamburger時設定Hamburger中間黑線透明*/
+
+    	 opacity: 0;
+    }
+      #Hamburger-Icon.delete-icon .Hamburger-Line:nth-child(1) {
+        	transform: translateY(8px) rotate(45deg);
+   }
+
+ 
+
+    #Hamburger-Icon.delete-icon .Hamburger-Line:nth-child(3) {
+
+          transform: translateY(-10px) rotate(-45deg);
+
+ }
+
+}
+
+ 
